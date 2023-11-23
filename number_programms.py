@@ -111,3 +111,89 @@ n2=eval(input('enter number 2'))
 print('numbers before swapping',n1,n2)
 n1,n2=n2,n1
 print('swapped numbers= ',n1,n2)
+
+
+print('#12 swap two numbers using third variable')
+n1=eval(input('enter number 1'))
+n2=eval(input('enter number 2'))
+print('numbers before swapping',n1,n2)
+n3=n1
+n1,n2=n2,n3
+print('swapped numbers= ',n1,n2)
+
+
+print('#13 print prime factors of a given number')
+def prime(num):
+    count=0
+    for i in range(1,num+1):
+        if num%i==0:
+            count+=1
+    return (True if (count==2) else False)
+
+num=eval(input('enter your number'))
+for i in range(1,num+1):
+    if num%i==0 and prime(i):
+        print(i)
+
+print('#14 sum of number without using arthematic ')
+n1=eval(input('enter number 1'))
+n2=eval(input('enter number 2'))
+print(sum([n1,n2]))
+
+print('#15 check num is a perfect num')
+n1=int(input('enter your number'))
+sum=0
+for i in range(1,n1):
+    if n1%i==0:
+        sum+=i
+if sum==n1:
+    print('perfect num')
+else:
+    print('not perfect ')
+
+
+print('#16 average of givem num')      
+numbers = [1, 2, 34, 56, 7, 23, 23, 12, 1, 2, 3, 34, 56]
+sumOfNums = 0
+count = 0
+for number in numbers:
+    sumOfNums += number
+    count += 1
+average = sumOfNums / count
+print("The list of numbers is:", numbers)
+print("The average of all the numbers is:", average)
+
+print('#17 factorial of given num')
+n1=int(input('enter your number'))
+res=1
+for i in range(1,n1+1):
+    res*=i
+print(res)
+
+
+print('#17 factorial of given num')
+def fact(res,n):
+    if n==0:
+        return res
+    return fact(res=res*n,n=n-1)
+n1=int(input('enter your number'))
+print(fact(1,n1))
+
+
+print('#20 square root of a givn num')
+import math
+n1=int(input('enter your number'))
+print(math.sqrt(n1))
+
+
+print('#21 convert decimal to binary')
+n1=eval(input('enter ypour decimal num'))
+rev=0
+n=1
+while n1!=0:
+    rem=n1%2
+    rev=rev+rem*n
+    n1//=2
+    n*=10
+print(rev)
+
